@@ -1,5 +1,7 @@
 \documentclass[10pt]{article}
 
+\renewcommand{\seriesdefault}{\bfdefault}
+
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{graphicx}
 \setlength{\topmargin}{0in} \setlength{\textheight}{9.25in}
@@ -36,6 +38,7 @@
 	\end{minipage}
 \end{center}
 \textbf{
+{Full name:}\\
 {Answers section}\\
 }
 {If you have multiple answers for one question write them all}
@@ -352,8 +355,8 @@ main() {
       cout << "Hello";
    } 
   cout << "Hi"; 
+  return 0;
 }
-return 0;
 
 \end{lstlisting}
 \begin{multicols}{4}
@@ -367,6 +370,314 @@ return 0;
 
 
 
+
+
+
+
+
+\item What will be the output of this code:
+\begin{lstlisting}[language=C++]
+#include <iostream>
+using namespace std;
+int main(){
+    void a = 10, b = 10;
+    int c;
+    c = a + b;
+    cout << c;
+    return 0;
+}
+
+\end{lstlisting}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 40
+    \item runtime error
+    \item compile error
+    \item 20
+\end{enumerate}
+\end{multicols}
+
+
+
+
+
+
+
+\item Which of the following gives  value of the first element of array?
+\begin{multicols}{4}
+\begin{enumerate}
+    \item array[0]
+    \item array[[]]         
+    \item array[1]
+    \item array
+\end{enumerate}
+\end{multicols}
+
+
+
+
+
+
+
+\item What will be the output of this code:
+\begin{lstlisting}[language=C++]
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a = 10;
+    if (a < 10) 
+    {
+        for (i = 0; i < 10; i++)
+            cout << i;
+    }
+    else 
+    {
+        cout << i;
+    }
+    return 0;
+}
+
+\end{lstlisting}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 123456789
+    \item error
+    \item 0123456789
+    \item 0
+\end{enumerate}
+\end{multicols}
+
+
+
+
+
+
+
+
+
+\item What will be the output of this code:
+\begin{lstlisting}[language=C++]
+#include < iostream >
+using namespace std;
+void fun(int x, int y){
+    x = 20;
+    y = 10;
+}
+int main(){
+    int x = 10;
+    fun(x, x);
+    cout << x;
+    return 0;
+}
+
+\end{lstlisting}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 10
+    \item 20
+    \item compile time error
+    \item none of the mentioned
+\end{enumerate}
+\end{multicols}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\item Which of the following functions will correctly return true if its argument is an odd integer ?
+\begin{lstlisting}[language=C++]
+I. bool IsOdd (int x) { return (x % 2 == 1); } 
+II. bool IsOdd (int x) { return (x / 2 == 1); } 
+III. bool IsOdd (int x) { if (x % 2 == 1) 
+return true; else return false; } 
+\end{lstlisting}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item II
+    \item I and II
+    \item I and III
+    \item II and III 
+\end{enumerate}
+\end{multicols}
+
+
+
+
+
+
+
+\item What will be the output of this code:
+\begin{lstlisting}[language=C++]
+#include <iostream>
+#include <set>
+using namespace std;
+int main (){
+    set<int> myset;
+    set<int>::iterator it;
+
+    for (int i = 1; i < 10; i++) 
+        myset.insert(i*20);
+    
+    it = myset.begin();
+    ++it;
+    myset.erase(it);
+    myset.erase(60);
+    it = myset.find(80);
+    myset.erase(it, myset.end());
+    cout << "myset contains:";
+    
+    for (it = myset.begin(); it != myset.end(); ++it)
+        cout << ' ' << *it;
+    
+    cout << '\n';
+    return 0;
+}
+\end{lstlisting}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 20
+    \item myset contains 10
+    \item myset contains 20
+    \item 40
+\end{enumerate}
+\end{multicols}
+
+
+
+
+
+
+\item What will be the output of this code:
+\begin{lstlisting}[language=C++]
+#include <iostream>
+#include <vector>
+using namespace std;
+int main (){
+    vector<int> myvector;
+    int sum = 0;
+    myvector.push_back(100);
+    myvector.push_back(200);
+    myvector.push_back(300);
+    while (!myvector.empty()){
+    if(myvector.back() % 2 == 0){
+        sum += myvector.back();
+        myvector.pop_back();
+    }
+    cout << "The elements of myvector add up to " << sum << '\n';
+    return 0;
+}
+
+\end{lstlisting}
+\begin{enumerate}
+    \item The elements of myvector add up to 200
+    \item 200
+    \item The elements of myvector add up to 600
+    \item 300
+\end{enumerate}
+
+
+
+
+
+
+
+
+\item What will be the output of this code:
+\begin{lstlisting}[language=C++]
+#include <iostream>
+#include <queue>       
+using namespace std;   
+int main (){
+    queue<int> myqueue;
+    int sum(0);
+    for (int i = 1;i <= 10; i++) 
+        myqueue.push(i);
+
+    while(myqueue.empty()){
+        sum += myqueue.front();
+        myqueue.pop();
+    }
+    cout << "total: " << sum << '\n';
+    return 0;
+}
+
+\end{lstlisting}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 55
+    \item error
+    \item 0
+    \item 65
+\end{enumerate}
+\end{multicols}
+
+
+
+
+
+
+
+
+\item What will be the output of this code:
+\begin{lstlisting}[language=C++]
+#include <iostream> 
+using namespace std;
+int main(){
+    string s = "yourself"
+    for(int i = 0;i < s.size()/2; i++) s[i] = s[i+1];
+    cout << s;
+    return 0;
+}
+
+\end{lstlisting}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item oursself
+    \item ourseelf
+    \item yourself
+    \item yourselt
+\end{enumerate}
+\end{multicols}
+
+
+
+
+
+
+
+
+\item What will be the output of this code:
+\begin{lstlisting}[language=C++]
+#include <iostream>
+using namespace std;
+int main(){
+	int a = 70;
+	string s = "70"
+	a = a + s;
+	cout << a;
+    return 0;
+}
+
+\end{lstlisting}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item compile error
+    \item 140
+    \item 70
+    \item 7070
+\end{enumerate}
+\end{multicols}
 
 
 
