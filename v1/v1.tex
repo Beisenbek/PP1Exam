@@ -5,7 +5,17 @@
 \setlength{\topmargin}{-.5in} \setlength{\textheight}{9.25in}
 \setlength{\oddsidemargin}{0in} \setlength{\textwidth}{6.8in}
 \graphicspath{ {../images/} }
-\usepackage{minted}
+\usepackage{listings}
+\usepackage{xcolor}
+% set the default code style
+\lstset{
+    frame=tb, % draw a frame at the top and bottom of the code block
+    tabsize=4, % tab space width
+    showstringspaces=false, % don't mark spaces in strings
+    commentstyle=\color{green}, % comment color
+    keywordstyle=\color{blue}, % keyword color
+    stringstyle=\color{red} % string color
+}
 
 \begin{document}
 \Large
@@ -59,13 +69,27 @@
     \item |
 \end{enumerate}
 
+
 \item What is the output of following program?
+\begin{lstlisting}[language=C++]
+#include <iostream>
+using namespace std;
+int main(){
+    int x = 15, y = 20;
+    x += 23;
+    y++;
+    cout << x % y;
+    return 0;
+}
+
+\end{lstlisting}
 \begin{enumerate}
-    \item \%
-    \item \#
-    \item \textsuperscript{$\wedge$} +
-    \item |
+    \item 19
+    \item 17+
+    \item 3
+    \item None of them
 \end{enumerate}
+
 
 
 \end{enumerate}
