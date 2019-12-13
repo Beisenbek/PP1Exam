@@ -54,7 +54,71 @@
 }
 \begin{enumerate}
 
-\item
+\item Which of the data types can not store “123,678” value?
+\begin{multicols}{4}
+\begin{enumerate}
+    \item string
+    \item float
+    \item int
+    \item double
+\end{enumerate}
+\end{multicols}
+
+
+
+
+\item What will be the output of this code:
+\begin{lstlisting}[language=C++]
+#include <iostream>
+using namespace std;
+int main(){
+    int n = 135;
+    int k =  n%10;
+    if(n%2==1 && n%k==0)
+        cout << "yes";
+    else
+        cout << "no";
+    return 0;
+}
+
+\end{lstlisting}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item yes
+    \item no
+    \item nan
+    \item none of the above
+\end{enumerate}
+\end{multicols}
+
+
+
+
+
+\item What will be the output of this code:
+\begin{lstlisting}[language=C++]
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a[5] = {1,2,3,4,5};
+    for (int i=4;i>=0;i--)
+    {
+        cout<<a[i]<<" ";
+    }
+}
+
+\end{lstlisting}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 1 2 3 4 5
+    \item 5 4 3 2 1
+    \item 4 3 2 1
+    \item 4 3 2 1 5
+\end{enumerate}
+\end{multicols}
+
+
 
 
 
