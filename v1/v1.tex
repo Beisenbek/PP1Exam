@@ -34,16 +34,20 @@
 		\end{center}
 	\end{minipage}
 \end{center}
-
+\textbf{
+{Answers section}\\
+}
 {If you have multiple answers for one question write them all}
 \begin{multicols}{5}
 \begin{enumerate}
 \item \item \item \item \item \item \item \item \item \item \item \item \item \item \item \item \item \item \item \item
 \end{enumerate}
 \end{multicols}
-
-
 \medskip\hrule
+\textbf{
+\\
+{Questions section}\\
+}
 \begin{enumerate}
 
 \item Which of the following data types takes 1 byte of memory?
@@ -74,7 +78,7 @@
 using namespace std;
 int main(){
     int x = 15, y = 20;
-    x = 23;
+    x += 23;
     y++;
     cout << x % y;
     return 0;
@@ -84,7 +88,7 @@ int main(){
 \begin{multicols}{4}
 \begin{enumerate}
     \item 19
-    \item 17+
+    \item 17
     \item 3
     \item None of them
 \end{enumerate}
@@ -108,7 +112,7 @@ int main(){
 \end{lstlisting}
 \begin{multicols}{4}
 \begin{enumerate}
-    \item 2+
+    \item 2
     \item 1
     \item 3
     \item None of them
@@ -280,7 +284,7 @@ int main(){
     string[5] phrases = {"hello", "welcome", "ready", 
                         "luck", "positive"};
     for(int i = 0; i < 5; i++){
-        mymap[phrases[i]] = i  1;
+        mymap[phrases[i]] = i + 1;
     }
     map<string, int> :: iterator it;
     for(it = mymap.begin(); it != mymap.end(); it++){
@@ -321,7 +325,7 @@ int main(){
 \end{multicols}
 
 
-\item Evaluate the next expression: \textbf{((false || true) \textsuperscript{$\wedge$} false) \&\& true}
+\item Evaluate the next expression: \textbf{((false or true) \textsuperscript{$\wedge$} false) \&\& true}
 \begin{multicols}{4}
 \begin{enumerate}
     \item true 
