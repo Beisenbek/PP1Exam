@@ -1,0 +1,379 @@
+\documentclass[10pt]{article}
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\setlength{\topmargin}{0in} \setlength{\textheight}{9.25in}
+\setlength{\oddsidemargin}{0in} \setlength{\textwidth}{6.8in}
+\graphicspath{ {../images/} }
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{multicol}
+% set the default code style
+\lstset{
+    frame=tb, % draw a frame at the top and bottom of the code block
+    tabsize=2, % tab space width
+    showstringspaces=false, % don't mark spaces in strings
+    commentstyle=\color{green}, % comment color
+    keywordstyle=\color{blue}, % keyword color
+    stringstyle=\color{orange} % string color
+}
+
+\begin{document}
+
+\begin{center}
+\includegraphics[width=8cm, height=2cm]{kbtu.jpg}
+\end{center}
+
+\begin{center}
+	\begin{minipage}{11.4cm}
+		\begin{center}
+				{\small \textsc{Kazakh-British Technical University}			\\
+						  \textsc{Faculty of Information technologies} \\
+                         \textbf{Course:} Programming Principles I \hspace{.65cm}
+                         \textbf{Date:} 14/12/2019\\\textbf{Variant:} 3\\
+                }
+		\end{center}
+	\end{minipage}
+\end{center}
+\textbf{
+{Answers section}\\
+}
+{If you have multiple answers for one question write them all}
+\begin{multicols}{5}
+\begin{enumerate}
+\item \item \item \item \item \item \item \item \item \item \item \item \item \item \item \item \item \item \item \item
+\end{enumerate}
+\end{multicols}
+\medskip\hrule
+\textbf{
+\\
+{Questions section}\\
+}
+\begin{enumerate}
+
+
+\item What will be the output of this code:
+\begin{lstlisting}[language=C++]
+#include <iostream>
+using namespace std;
+int main(){
+    for(int i = 0; i <= 5; i++) {
+        if (i % 2 == 0)
+            continue;
+       else
+            cout << i << " ";
+   	}
+    return 0;
+}
+\end{lstlisting}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 0 2 4 
+    \item 0 1 2 3 4 5 
+    \item 1 3
+    \item 1 3 5 
+\end{enumerate}
+\end{multicols}
+
+
+
+
+
+
+
+
+
+
+
+\item What will be the output of this code:
+\begin{lstlisting}[language=C++]
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int main(){
+    int a[4] = {20, 4, -1, -8};
+    sort(a, a + 4);
+    for (int i = 0; i < 3; i++)
+        cout << a[i] << " ";
+    return 0;
+}
+\end{lstlisting}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 20 4 -1 -8 
+    \item  -8 -1 4
+    \item 4 -1 -8
+    \item -8 -1 4 20 
+\end{enumerate}
+\end{multicols}
+
+
+
+
+
+
+
+
+\item What will be the output of this code:
+\begin{lstlisting}[language=C++]
+using namespace std;
+int main(){
+    set<int> s;
+    s.insert(5);
+    s.insert(6);
+    s.insert(7);
+    s.insert(5);
+    set<int> :: iterator it;
+    for (it = s.begin(); it != s.end(); it++)
+        cout << *it << " ";
+    return 0;
+}
+\end{lstlisting}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item None of them 
+    \item 7 6 5
+    \item 5 5 6 7
+    \item 5 6 7 
+\end{enumerate}
+\end{multicols}
+
+
+
+
+
+
+
+
+
+
+\item What will be the output of this code:
+\begin{lstlisting}[language=C++]
+#include <iostream>
+using namespace std;
+int main(){
+    string s = "CheAtiNg";
+    for (int i = 0; i < s.size();i++) {
+        if (s[i] >= 'A' && s[i] <= 'Z')
+            cout << s[i + 1];
+    }
+    return 0;
+}
+\end{lstlisting}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item h t g
+    \item c a n
+    \item h g
+    \item g t h 
+\end{enumerate}
+\end{multicols}
+
+
+
+
+
+
+
+\item What will be the output of this code:
+\begin{lstlisting}[language=C++]
+#include <iostream>
+
+using namespace std;
+
+int recursion(int n) {
+    if (n == 1) {
+        return 1;
+    }
+    return recursion(n - 2) * n;
+}
+
+int main()
+{
+    int n = 7;
+    cout << recursion(n);
+    return 0;
+}
+
+\end{lstlisting}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 5040
+    \item 720
+    \item 105
+    \item 28
+\end{enumerate}
+\end{multicols}
+
+
+
+
+
+
+
+
+\item Evaluate the next expression, where n = 135:
+\begin{lstlisting}[language=C++]
+n << 0
+\end{lstlisting}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 270
+    \item 67
+    \item 1350
+    \item None of the above
+\end{enumerate}
+\end{multicols}
+
+
+
+
+
+
+
+
+\item What will be the output of this code:
+\begin{lstlisting}[language=C++]
+#include <iostream>
+#include<vector>
+
+using namespace std;
+
+int main(){
+    vector<int> v(5);
+    v.push_back(0);
+    v.push_back(7);
+    v.push_back(0);
+    v.push_back(10);
+    v.push_back(2);
+    
+    for (int i = 0; i < v.size() - 1; i++) {
+        bool ok = (v[i] & v[i+1]);
+        if (ok)
+            cout << "ok" << " ";
+    }
+
+    return 0;
+
+}
+
+
+\end{lstlisting}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item ok
+    \item ok ok
+    \item ok ok ok
+    \item None of the above
+\end{enumerate}
+\end{multicols}
+
+
+
+
+
+
+
+
+
+\item What will be the output of this code:
+\begin{lstlisting}[language=C++]
+#include <iostream> 
+#include <map> 
+   
+using namespace std; 
+   
+int main() { 
+     map<int, int> marks; 
+     marks.insert(pair<int, int>(160, 42)); 
+     marks.insert(pair<int, int>(166, 34)); 
+   
+     map<int, int>::iterator it; 
+
+     for (it =  marks.begin(); it !=  marks.end(); ++it) { 
+        cout << *it << " "; 
+     } 
+     return 0;     
+  }
+
+\end{lstlisting}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 160 42 166 34
+    \item 160 166
+    \item 42 34
+    \item None of the above
+\end{enumerate}
+\end{multicols}
+
+
+
+
+
+
+\item What will be the output of this code:
+\begin{lstlisting}[language=C++]
+#include<iostream>
+
+using namespace std;
+void swap(int m, int n) {
+    int x = m;
+    m = n;
+    n = x;
+}
+main() {
+    int x = 5, y = 3;
+    swap(x, y);
+    cout << x << " " << y;
+    return 0;
+}
+\end{lstlisting}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item 3 5
+    \item 5 3
+    \item 5 5
+    \item Compile error
+\end{enumerate}
+\end{multicols}
+
+
+
+
+
+\item What will be the output of this code:
+\begin{lstlisting}[language=C++]
+#include<iostream>
+using namespace std;
+main() { 
+   int x = 5;
+   if(x == 5) {	
+      if(x == 5) break;
+      cout << "Hello";
+   } 
+  cout << "Hi"; 
+}
+return 0;
+
+\end{lstlisting}
+\begin{multicols}{4}
+\begin{enumerate}
+    \item Compile error
+    \item Hi
+    \item HelloHi
+    \item Hello
+\end{enumerate}
+\end{multicols}
+
+
+
+
+
+
+\end{enumerate}
+\textbf{
+Minutes \#2 of Faculty of Information Technology meeting November 11, 2019 \\\\
+Teachers: Baisakov B. M., Akshabayev A. K. \\\\ 
+Dean of FIT Suliev R. N \\\\
+}
+\end{document} 
